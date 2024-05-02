@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+html{
+    scroll-behavior: smooth;
+    padding: 0px;
+    margin: 0px;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -23,16 +27,22 @@ header{
 
 }
 nav{
-    background-color: rgb(43, 37, 37);
+    
     width: 100%;
     height: auto;
+    position: fixed;
 }
 ul{
+    
+    background-color: black;
     width: 100%;
-    height: auto;
+    height: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.logo-p{
+    color: white;
 }
 p{
     color: white;
@@ -75,9 +85,11 @@ h1{
     color: white;
     font-family: "Poppins", sans-serif;
 }
-p{
+.hm-txt, .hm-txt span{
     color: white;
     text-align: center;
+    font-size: xx-large;
+    font-weight: lighter;
     font-family: "Poppins", sans-serif;
 }
 span{
@@ -87,22 +99,18 @@ span{
 }
 .homebtn1{
     width: 120px;
-    padding: 5px 0px;
-    background-color: ffff;
+    padding: 5px 10px;
+    background-color: white;
     color: black;
     border: none;
-    font-size: smaller;
+    font-size: medium;
     font-family: "Poppins", sans-serif;
 }
-.homebtn2{
-    width: 120px;
-    padding: 5px 0px;
-    background-color: rgba(19, 18, 17, 0.781);
+.homebtn1:hover{
+    background-color: black;
     color: white;
-    border: none;
-    font-size: smaller;
-    font-family: "Poppins", sans-serif;
 }
+
 .keypoints{
     width: 100%;
     height: max-content;
@@ -111,6 +119,9 @@ span{
     justify-content: space-around;
     line-height: 15px;
    margin-top: 20%;
+}
+.keypoints div p{
+    color: white;
 }
 .s1pro_slider{
     width: 100%;
@@ -319,6 +330,7 @@ span{
 }
 .technology p{
     font-size: medium;
+    padding:5px 10% ;
 }
 .technology-img{
     width: 100%;
@@ -365,8 +377,44 @@ span{
     color: black;
     font-size: 50px;
 }
+.color-picker {
+    display: flex;
+    gap: 10px;
+   
+}
+.color-picker div{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.colors-note{
+    color: red;
+    font-size: 25px;
+}
+#color1{
+    background-color: black;
+    color: white;
+}
+#color2{
+    background-color: white;
+    color: black;
+}
+#color3{
+    background-color: blue;
+    color: white;
+}
+#color4{
+    background-color: rgb(5, 5, 53);
+    color: white;
+}
+#color5{
+    background-color: rgb(40, 40, 122);
+    color: white;
+}
 .color-img{
     display: flex;
+    overflow: hidden;
     align-items: center;
 }
 .specic{
@@ -401,6 +449,12 @@ table,tr,td{
     justify-content: space-around;
     padding: 5% 10%;
 
+}
+select{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
 }
 .price-img{
     width: 40%;
@@ -614,7 +668,52 @@ table,tr,td{
     text-align: center;
     color: white;
   }
+  .menubar{
+    display: none;
+  }
   @media screen and (max-width:900px) {
+nav ul{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: start;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.menubar{
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.menubar div{
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+}
+nav ul>a{
+    display: none;
+}
+nav ul div{
+    position: relative;
+    top: 20%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    flex-direction: column;
+    background-color: black;
+}
+nav ul div li a{
+    font-size: xx-large;
+    color: white;
+}
     .title{
         display: none;   }
    .Design-outer,.performance{
@@ -768,9 +867,7 @@ select{
     padding: 10px;
     border-radius: 10px;
 }
-header,.HomeBanner{
-    display: none;
-}
+
 
 /* ---------service-container---- */
 .service-container{
@@ -873,6 +970,7 @@ header,.HomeBanner{
 .logo{
     width: 80%;
     text-align: center;
+    
 }
 footer div {
     width: 40%;
@@ -882,7 +980,7 @@ footer div {
 }
 .slide img{
     height: 200px;
-    object-fit: ;
+    
 }
 .img-container{
     width: 400px;
