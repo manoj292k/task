@@ -717,6 +717,27 @@ nav ul div li a{
 }
     .title{
         display: none;   }
+.Banner{
+    background-size:150% 120% ;
+}
+    .keypoints{
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-end;
+    }
+    .keypoints div{
+        position: relative;
+        right: 25%;
+    }
+    .keypoints div p{
+        font-size: 40px;
+    }
+    .keypoints div p span{
+        font-size: large;
+        position: relative;
+        top: 20px;
+        text-align: left;
+    }
    .Design-outer,.performance{
     flex-direction: column;
     width: 100%;
