@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EVM - Electric Scooter</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -11,28 +11,32 @@
 
 </head>
 <body>
-    <header>
-       <nav>
-        <ul>
-           <p>OLA</p>
-           <div>
-            <li><a href="#">Home</a></li>
-            <li><a href="#Design">Design</a> </li>
-            <li><a href="#performance">Performance</a> </li>
-           
-            <li> <a href="#technology">Techonology</a></li>
-            <li><a href="#service">Service</a> </li>
-            <li> <a href="contact">Contact</a></li>
+
+    <header >
+        <div class="menubar">
+            <div>EVM</div>
+            <div id="modeTggle" onclick="menuClicked()">☰</div>
         </div>
-        </ul>
+       <nav>
+            <ul>
+                <a href="#">EVM</a>
+                <div>
+                <li><a onclick="menuClicked()" href="#">Home</a></li>
+                <li><a onclick="menuClicked()"  href="#Design">Design</a></li>
+                <li><a  onclick="menuClicked()" href="#performance">Performance</a></li>
+                <li><a  onclick="menuClicked()" href="#technology">Techonology</a></li>
+                <li><a onclick="menuClicked()"  href="#service">Service</a></li>
+                <li><a onclick="menuClicked()"  href="#FAQ">FAQ</a></li>
+                </div>
+            </ul>
        </nav>
     </header>
     <Hero class="HomeBanner">
         <div class="Banner" id="#">
             <center>
-                <h1>S1 Pro</h1>
-                <P>Engineered to thrill! <br> <span> Now at  ₹1,29,999</span> </P> <br>
-               <div class="homebtn"> <button class="homebtn1">Order Now</button> <button class=" homebtn2">Watch the flim </button>
+                <h1>M1 Pro</h1>
+                <P class="hm-txt">Engineered to thrill! <br> <span> Now at  ₹1,29,999</span> </P> <br>
+               <div class="homebtn"> <btn class="homebtn1">Book Now →</btn> 
                 </div>
             
             </center>
@@ -78,7 +82,7 @@
     <div class="Design-outer">
        
             <h1 class="price-h1">Design </h1>
-            <p>The all new OLA S1 Pro is designed to give you the best of the comfort, convenience and superior riding experience. Add to this steiking goood looks and trust bulid quality from OLA, and what you get in an electric scooter that's just the best! </p>
+            <p>The all new EVM M1 Pro is designed to give you the best of the comfort, convenience and superior riding experience. Add to this steiking goood looks and trust bulid quality from EVM, and what you get in an electric scooter that's just the best! </p>
            
             <div class="Design-img">
                 <div class="item-1">
@@ -156,15 +160,20 @@
             <h1>Custom made.  <br>For you</h1>
             <p>Go glossy. Go matte. Go full technicolor.
                 Choose your vibe here.</p>
-                <li>Jet Black</li>
-                <li>Matt White</li>
-                <li>Stellar Blue</li>
-                <li> Midnight Blue</li>
-                <li> Amethyst</li>
+                <p class="colors-note">Click the colors to experience →</p>
+                <br>
+                <div class="color-picker">
+                    <div class="color" id="color1" onclick="changeImage('./images/black.png')">Jet Black</div>
+                    <div class="color" id="color2" onclick="changeImage('./images/white.png')">Matt White</div>
+                    <div class="color" id="color3" onclick="changeImage('./images/blue.png')">Stellar Blue</div>
+                    <div class="color" id="color4" onclick="changeImage('./images/darkblue.png')">Midnight Blue</div>
+                    <div class="color" id="color5" onclick="changeImage('./images/Asthetic.png')">Amethyst</div>
+                </div>
+                
         </div>
         <div class="color-img">
-            <div class="item-1">
-                <img src="./images/blue_s1.png" alt="">
+            <div class="item-1" class="product-image" id="productImage">
+                <img src="./images/white.png" id="productImage" alt="Product Image">
             </div>
 
         </div>
@@ -211,7 +220,7 @@
         
         <div class="price-detial">
             <label for="loaction">Location</label> <br>
-            <select name="" id="">
+            <select name="" id="location"  onchange="updatePrice()">
                 <option value="Tamilnadu">Tamilnadu</option>
                 <option value="Karantaka">Karantaka</option>
                 <option value="kerala">kerala</option>
@@ -221,30 +230,30 @@
                 <option value="gujarat">Gujarat</option>
             </select> <br>
             <label for="varient"> Varient</label> <br>
-            <select name="" id="">
-                <option value="s1pro"> S1 Pro</option>
-                <option value="s1pro"> S1 Air</option>
+            <select name="" id="varient"  onchange="updatePrice()">
+                <option value="s1pro"> M1 Pro</option>
+                <option value="s1pro"> M1 Air</option>
             </select> <br>
             <label for="color"> Color</label> <br>
-            <select name="" id="">
-                <option value="">Jet Black</option>
-                <option value="">Matt White</option>
-                <option value="">Stellar Blue</option>
-                <option value="">Midnight Blue</option>
-                <option value="">Amethyst</option>
+            <select name="" id="color"  onchange="updateColor()">
+                <option value="black">Jet Black</option>
+                <option value="white">Matt White</option>
+                <option value="blue">Stellar Blue</option>
+                <option value="darkblue">Midnight Blue</option>
+                <option value="Amethyst">Amethyst</option>
             </select>
             <p>EX-Showroom price `(including GST)`</p>
             <br>
-            <h2>₹ 1,50,000</h2> <br> <br> <br><br>
+            <h2 id="price">₹ 1,50,000</h2> <br> <br> <br><br>
             <span><b> Note- </b> <br> This price displayed is subjected to change, final vehicle may be vary will be applicable on date of delivey. <br>
            This price displayed above the excluded the road tax, insurance, registration and other charges. Click on booking to find the detialed price breakup.</span>
         <br><br>
-           <btn class="price-btn"> Book Now</button>
+           <btn class="price-btn"> Book Now</btn>
         </div>
     </div>
     <div class="service-container" id="service">
         <h1>Your Eyes on the Road. <br>
-            Ours on your Ola S1</h1>
+            Ours on your EVM M1 pro</h1>
             <div class="service-items">
                 <div><img src="./images/service_img1.webp" alt="">
                 <h3>Road Assistance</h3>
@@ -329,7 +338,7 @@
   </section>
   <footer>
     
-        <h1 class="logo">OLA</h1>
+        <h1 class="logo">EVM</h1>
     
     <div>
         <h3>comapany</h3>
@@ -363,7 +372,7 @@
     </div>
 
   </footer>
-  <div class="copyright">&#169; Ola electric Company, All rights reserved </div>
+  <div class="copyright">&#169; EVM electric Company, All rights reserved </div>
 <script src="./script.js"></script>
   
  
