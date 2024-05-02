@@ -434,7 +434,7 @@ table,tr,td{
     color: rgb(51, 48, 48);
     
 }
-.price-detial button{
+.price-btn{
     float: right;
     background-color: black;
     color: white;
