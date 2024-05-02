@@ -589,7 +589,8 @@ table,tr,td{
     width: 100%;
     height: max-content;
     background-color: black;
-    display: flex;flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 
   }
@@ -638,18 +639,23 @@ table,tr,td{
     padding: none;
     gap: 15px;
     overflow: scroll;
+    overflow-y: hidden;
 }
 .Design-img div,.performance-img div,.technology-img div{
    
    width: 300px;
    height: 500px;
-   border-radius: 20px;
+   border-radius: 30px;
+   border: 1px solid black;
    
 }
 .Design-img div img,.performance-img div img,.technology-img div img{
     width: 300px;
+    border-radius: 30px;
     object-fit: cover;
     height: 100%;
+    position: relative;
+    top: -20%;
    
 }
 
@@ -864,5 +870,24 @@ header,.HomeBanner{
   .faq-item2 div p{
     font-size: 25px;
   }
-
+.logo{
+    width: 80%;
+    text-align: center;
+}
+footer div {
+    width: 40%;
+}
+.slide{
+    height: 200px;
+}
+.slide img{
+    height: 200px;
+    object-fit: ;
+}
+.img-container{
+    width: 400px;
+}
+  }
+  .img-container p{
+    font-size: 25px;
   }
