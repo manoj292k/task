@@ -71,9 +71,9 @@ else if(color=== "Amethyst"){
 }
 document.getElementById("price").innerText = "₹ " + locationPrice.toLocaleString();
 }
-
+// ------------ vehicle color change-----------------
 function changeImage(imageName) {
-  console.log("working", imageName)
+
   var productImage = document.getElementById("productImage");
   productImage.innerHTML = `<img src="${imageName}" alt="Product Image">`;
 }
