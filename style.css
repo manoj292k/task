@@ -194,7 +194,9 @@ span{
   .next {
     right: 0;
   }
-
+.mobile-note{
+    display: none;
+}
 .image-slider div p{
     color: black;
     font-size: smaller;
@@ -582,4 +584,285 @@ table,tr,td{
     text-align: left;
     border: none;
   }
- 
+  footer{
+    padding: 5%;
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    display: flex;flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+  footer div li{
+    list-style: none;
+    color: rgb(218, 209, 209);
+    font-weight: lighter;
+  }
+  footer div h3{
+    color: white;
+  }
+  footer div li:hover{
+    color: white;
+    cursor: pointer;
+  }
+  footer div p{
+    width: 500px;
+  }
+  .copyright{
+    background-color: black;
+    text-align: center;
+    color: white;
+  }
+  @media screen and (max-width:900px) {
+    .title{
+        display: none;   }
+   .Design-outer,.performance{
+    flex-direction: column;
+    width: 100%;
+    padding: 10% 0px;
+   }
+
+   .Design-outer p{
+    color: rgb(88, 83, 83);
+    font-size: medium;
+    padding:  5px 5%;
+}
+
+.Design-img,.performance-img,.technology-img{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: none;
+    gap: 15px;
+    overflow: scroll;
+}
+.Design-img div,.performance-img div,.technology-img div{
+   
+   width: 300px;
+   height: 500px;
+   border-radius: 20px;
+   
+}
+.Design-img div img,.performance-img div img,.technology-img div img{
+    width: 300px;
+    object-fit: cover;
+    height: 100%;
+   
+}
+
+.mobile-note{
+    display: block;
+    text-decoration: none;
+    color: rgb(195, 20, 211);
+    font-size: large;
+}
+.Design-img div p{
+    font-size: x-large;
+    color: black;
+    font-weight: bold;
+}
+.Design-img div p span{
+    color: black;
+
+}
+
+.color-container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+.color-container1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.color-container1 h1{
+    color: black;
+    font-size: 50px;
+}
+.color-container1 li{
+    list-style: none;
+    font-size: x-large;
+    text-align: left;
+}
+.color-container1 p{
+    color: indigo;
+    font-size: 25px;
+}
+
+.specic{
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    padding: 10% 10%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    
+}
+table{
+    width: 100%;
+    overflow: scroll;
+}
+table,tr,td{
+    border: 1px solid rgb(117, 104, 104);
+    border-collapse: collapse;
+    padding: 10px 30px;
+    color: white;
+    font-size: x-large;
+
+    text-align: left;
+   
+}
+
+.price-container{
+    flex-direction: column;
+    padding: 5% 10%;
+    gap: 20px;
+
+}
+.price-h1{
+ font-size: 50px;
+}
+.price-txt{
+    font-size: 25px;
+}
+.price-img{
+    width: 100%;
+
+}
+
+.price-detial{
+    width: 100%;
+    padding: 5%;
+    
+}
+.price-detial p{
+ font-size:medium ;
+ float: left;
+ text-align: left;
+}
+.price-detial h2{
+    color: red;
+    float: right;
+    position: relative;
+    top: -15%;
+}
+select{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+header,.HomeBanner{
+    display: none;
+}
+
+/* ---------service-container---- */
+.service-container{
+    width: 100%;
+    height: max-content;
+    padding: 5% 10%;
+
+}
+.service-container h1{
+    color: green;
+    font-size: 50px;
+}
+.service-items{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+    
+}
+.service-items div{
+    width: 100%;
+    height: 450px;
+    padding: 10px 10px;
+   
+}
+.service-items div img{
+    width: 100%;
+    height: 300px;
+}
+.service-items div p{
+    color: rgb(39, 38, 38);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.service-list {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.service-list div{
+    width: 250px;
+    height: 60px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 5px 5px rgb(110, 240, 121);
+    background-color: rgb(121, 255, 161);
+}
+.charge-container{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.charge-container div{
+    width: 100%;
+}
+.charge-container div h1{
+    font-size: 50px;
+}
+.charge-container div h4{
+    text-align: center;
+    font-size: 25px;
+}
+.charge-container div span{
+    font-size: 25px
+}
+
+.faq-container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+
+  }
+  .faq-item1{
+    width: 100%;
+    
+  }
+  .faq-item2{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding:5% 0px;
+    flex-direction: column;
+  }
+  .ques{
+    border: 1px solid black;
+    font-size: 20px;
+    width: 95%;
+    text-align: left;
+    border: none;
+  }
+  .faq-item2 div p{
+    font-size: 25px;
+  }
+
+  }
