@@ -682,6 +682,7 @@ nav ul{
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+    z-index: 100;
 }
 .menubar{
     width: 100%;
