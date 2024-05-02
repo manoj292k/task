@@ -40,6 +40,7 @@ ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index:100;
 }
 .logo-p{
     color: white;
