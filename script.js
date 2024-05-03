@@ -118,3 +118,23 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkFade);
 });
 
+// ---------------------------------
+function message(){
+  var submit = document.getElementById("textarea").value;
+
+  if (submit.length >=  2) {
+  window.alert("Thank you for your message : )");
+  console.log("success",submit);
+  } 
+  else {
+  window.alert("Invalid or Your message is to short");
+  console.log("failed",submit);
+  }
+}
+document.addEventListener('scroll', function(){
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.clientHeight;
+  const winHeight = window.innerHeight;
+  const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+  document.getElementById('progress-bar').style.width = scrollPercent + '%';
+});
