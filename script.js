@@ -34,19 +34,17 @@ setInterval(autoSlide, intervalTime);
 
 function updatePrice() {
   var location = document.getElementById("location").value;
-  var price = 150000; // Default price
-
-  // Adjust price based on location
+  var price = 150000;
   if (location === "Karantaka" || location === "maharastra") {
-      price += 5000; // Add 5000 for Karnataka and Maharashtra
+      price += 5000; 
   } else if (location === "delhi") {
-      price += 10000; // Add 10000 for Delhi
+      price += 10000; 
   } else if (location === "Andhra pradesh") {
-      price += 3000; // Add 3000 for Andhra Pradesh
+      price += 3000; 
   } else if (location === "kerala") {
-      price += 2000; // Add 2000 for Kerala
+      price += 2000;
   } else if (location === "gujarat") {
-      price += 4000; // Add 4000 for Gujarat
+      price += 4000;
   }
   
 return price;
@@ -80,10 +78,29 @@ function changeImage(imageName) {
 // ----------------------------------------------
 function menuClicked(){
   var ul = document.querySelector('nav ul');
+  var hide = document.querySelector(".contact");
+  var hide2 = document.querySelector(".service-list")
+  var hide3 = document.querySelector(".Banner")
+  var hide4 = document.querySelector(".Design-outer")
+  var hide5 = document.querySelector(".performance")
+  var hide6 = document.querySelector(".service-container h1")
   if (ul.style.display === "block") {
     ul.style.display = "none";
+    hide.style.display="block";
+    hide2.style.display="block";
+    hide3.style.display="block";
+    hide4.style.display="block";
+    hide5.style.display="block";
+    hide6.style.display="block";
+
   } else {
     ul.style.display = "block";
+    hide.style.display="none";
+    hide2.style.display="none";
+    hide3.style.display="none";
+    hide4.style.display="none";
+    hide5.style.display="none";
+    hide6.style.display="none";
   }
 
 }
@@ -118,6 +135,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkFade);
 });
 
+
+// function menuClicked() {
+
+//   if (window.matchMedia("(max-width: 900px)").matches) {
+//   }
+// }
 // ---------------------------------
 function message(){
   var submit = document.getElementById("textarea").value;
