@@ -45,6 +45,19 @@ nav{
     height: auto;
     position: fixed;
 }
+.Desktop{
+    width: 60%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+  .Desktop li{
+    float: left;
+    padding: 5px 30px;
+    
+  }
 ul{
     
     background-color: black;
@@ -70,6 +83,9 @@ ul div{
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5px 10px;
+}
+ul div li{
+    padding: 5px;
 }
 ul div li,ul div li a{
     list-style: none;
@@ -761,6 +777,7 @@ input{
     width: 95%;
     text-align: left;
     border: none;
+    
   }
   footer{
     padding: 5%;
@@ -795,6 +812,10 @@ input{
   .menubar{
     display: none;
   }
+  .mobile{
+    display: none;
+  }
+  
   @media screen and (max-width:900px) {
 nav ul{
     width: 100%;
@@ -805,6 +826,12 @@ nav ul{
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+}
+.Desktop{
+    display: none;
+}
+.mobile{
+    display: block;
 }
 .menubar{
     width: 100%;
@@ -819,6 +846,7 @@ nav ul{
     color: white;
     padding: 10px;
     font-size: x-large;
+    cursor: pointer;
 }
 nav ul>a{
     display: none;
@@ -1077,6 +1105,8 @@ select{
 .service-list {
     gap: 20px;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     z-index: -1;
     justify-content: space-around;
 }
