@@ -5,6 +5,7 @@ html{
     padding: 0px;
     margin: 0px;
 }
+
 *{color: black;
     margin: 0px;
     padding: 0px;
@@ -13,10 +14,21 @@ html{
         font-weight: 500;
         font-style: normal;
       }
-      
+   
 }
-
-
+#progress-container{
+    position: fixed;
+    left: 0;
+    top: 50px;
+    height: 6px;
+    width: 100%;
+    background: gray;
+}
+#progress-bar{
+    height: 100%;
+    background-color: rgb(17, 248, 17);
+    width: 0;
+}
 body{
     width: 100%;
     height: max-content;
@@ -24,6 +36,7 @@ body{
 header{
     width: 100%;
     height: 100%;
+    z-index: 2;
 
 }
 nav{
@@ -40,10 +53,11 @@ ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    z-index:100;
 }
-.logo-p{
+ul a{
     color: white;
+    text-decoration: none;
+    font-size: larger;
 }
 p{
     color: white;
@@ -72,6 +86,7 @@ ul div li,ul div li a{
     height: 100vh;
     background: url(./images/home_banner_1.webp) no-repeat;
     background-size: cover;
+    z-index: -2;
 }
 .Banner div{
     align-items: center;
@@ -92,6 +107,7 @@ h1{
     font-size: xx-large;
     font-weight: lighter;
     font-family: "Poppins", sans-serif;
+    
 }
 span{
     color: white;
@@ -120,6 +136,7 @@ span{
     justify-content: space-around;
     line-height: 15px;
    margin-top: 20%;
+   z-index: 0;
 }
 .keypoints div p{
     color: white;
@@ -130,8 +147,10 @@ span{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    z-index: -1;
     
 }
+
 
 .heading{
     position: relative;
@@ -148,10 +167,14 @@ span{
     gap: 20px;
 }
 .img-container{
-    width:250px;
+    width:350px;
     height: 450;
     border-radius: 5px;
+    z-index: -1;
     
+}
+.img-container{
+    font-size: 30px;
 }
 .img-container img{
     width: 100%;
@@ -163,7 +186,9 @@ span{
     transition: ease-in-out 0.8s;
 }
 .img-text{
-    display: ne;
+    display: block;
+    font-size: medium;
+    font-weight: bold;
 }
 /* ----image slider-------- */
 
@@ -171,6 +196,7 @@ span{
     position: relative;
     width: 100%;
     overflow: hidden;
+    z-index: -1;
   }
   
   .carousel {
@@ -186,26 +212,8 @@ span{
   .slide img {
     width: 100%;
   }
+ 
   
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 18px;
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
 .mobile-note{
     display: none;
 }
@@ -241,8 +249,10 @@ span{
 }
 .Design-outer p{
     color: rgb(88, 83, 83);
-    font-size: medium;
+    font-size: 20px;
     padding:  5px 10%;
+    text-align: center;
+    
 }
 
 .Design-img{
@@ -253,11 +263,13 @@ span{
     justify-content: space-around;
     padding: 5% 15%;
     gap: 15px;
+    
 }
 .Design-img div{
     width: 300px;
     height: 400px;
     border-radius: 10px;
+    z-index: -1;
 }
 .Design-img div img{
     width: 100%;
@@ -293,8 +305,9 @@ span{
     color: black;
 }
 .performance p{
-    font-size: medium;
+    font-size: 20px;
     padding:  5px 10%;
+    text-align: center;
     color: rgb(39, 34, 34);
 }
 .performance-img{
@@ -305,10 +318,15 @@ span{
     justify-content: space-around;
     padding: 5% 10%;
 }
+.performance-img .fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
 .performance-img div{
     width: 300px;
     height: 400px;
     border-radius: 10px;
+    z-index: -1;
 
 }
 .performance-img div img{
@@ -330,7 +348,9 @@ span{
 
 }
 .technology p{
-    font-size: medium;
+    font-size: 20px;
+    padding:  5px 10%;
+    text-align: center;
     padding:5px 10% ;
 }
 .technology-img{
@@ -345,6 +365,7 @@ span{
     width: 300px;
     height: 400px;
     border-radius: 10px;
+    z-index: -1;
 
 }
 .technology-img div img{
@@ -374,6 +395,10 @@ span{
     align-items: center;
     flex-direction: column;
 }
+.color-container1 p{
+    text-align: center;
+    padding: 0px 5%;
+}
 .color-container1 h1{
     color: black;
     font-size: 50px;
@@ -388,10 +413,13 @@ span{
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid black;
+    z-index: -1;
 }
 .colors-note{
     color: red;
     font-size: 25px;
+    z-index: -1;
+    text-decoration: none;
 }
 #color1{
     background-color: black;
@@ -417,6 +445,7 @@ span{
     display: flex;
     overflow: hidden;
     align-items: center;
+    z-index: -1;
 }
 .specic{
     width: 100%;
@@ -449,7 +478,11 @@ table,tr,td{
     display: flex;
     justify-content: space-around;
     padding: 5% 10%;
+    
 
+}
+.price-txt{
+    padding: 0px 10%;
 }
 select{
     width: 100%;
@@ -459,6 +492,7 @@ select{
 }
 .price-img{
     width: 40%;
+    z-index: -1;
 
 }
 .price-img img{
@@ -471,10 +505,12 @@ select{
     background:rgb(231, 231, 231);
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgb(212, 166, 166);
+    z-index: -1;
 }
 .price-detial p{
  font-size:medium ;
  float: left;
+ 
 }
 .price-detial h2{
     color: red;
@@ -502,12 +538,15 @@ select{
     width: 100%;
     height: max-content;
     padding: 5% 10%;
+    z-index: -1;
 }
 .service-container h1{
     color: green;
     font-size: 50px;
+    z-index: -1;
 }
 .service-items{
+    z-index: -1;
     width: 100%;
     height: max-content;
     display: flex;
@@ -515,6 +554,7 @@ select{
     
 }
 .service-items div{
+    z-index: -1;
     width: 30%;
     height: 300px;
     background:rgb(231, 231, 231);
@@ -541,8 +581,10 @@ select{
     padding: 10%;
     display: flex;
     justify-content: space-around;
+    
 }
 .service-list div{
+    z-index: -2;
     padding: 5px 10px;
     border: 1px solid blueviolet;
     border-radius: 10px;
@@ -560,6 +602,7 @@ select{
 
 }
 .charge-container div{
+    
     width: 40%;
     height: max-content;
     display: flex;
@@ -588,6 +631,84 @@ select{
     height: 100%;
    
   }
+  
+.contact{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: black;
+    align-items: center;
+    z-index: -1;
+
+}
+.contact div h2{
+    color: rgb(25, 243, 25);
+    font-size: 40px;
+    font-weight: 500;
+    padding: 5px 2%;
+}
+.contact div img{
+    display: flex;
+    align-items: center;
+}
+.contact .container{
+    width: 50%;
+    padding: 50px 10px;
+    
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap:20px ;
+    text-align: center;
+}
+input{
+    width: 100%;
+    height: 3rem;
+    background-color: transparent;
+    color: rgb(230, 230, 230);
+    font-size: larger;
+
+    border: none;
+    border-bottom: 1px solid white;
+}
+#textarea{
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+
+.contact div{
+    width: 30%;
+    height: auto;
+    z-index: 0;
+}
+.contact img{
+    width: 400px;
+    height: auto;
+}
+.container div{
+    width: 83%;
+    align-items: center;
+    text-align: center;
+
+}
+.container div button{
+    padding: 5px 15px;
+    margin-left: 20%;
+    
+    opacity: 1;
+    color: white;
+    cursor: pointer;
+    background: green;
+    border-radius: 10px;
+}
   .faq-container{
     width: 100%;
     height: max-content;
@@ -596,6 +717,7 @@ select{
 
   }
   .faq-item1{
+    z-index: -1;
     width: 40%;
     height: max-content;
     display: flex;
@@ -683,7 +805,6 @@ nav ul{
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    z-index: 100;
 }
 .menubar{
     width: 100%;
@@ -740,15 +861,30 @@ nav ul div li a{
         top: 20px;
         text-align: left;
     }
+    .image-slider{
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .image-slider p{
+        color: black;
+        font-size: x-large;
+    }
+    .image-slider p span{
+        color: black;
+        font-size: 20px;
+        font-weight: lighter;
+    }
    .Design-outer,.performance{
     flex-direction: column;
     width: 100%;
     padding: 10% 0px;
+    z-index: -1;
    }
 
    .Design-outer p{
     color: rgb(88, 83, 83);
-    font-size: medium;
+    z-index: -1;
     padding:  5px 5%;
 }
 
@@ -941,6 +1077,7 @@ select{
 .service-list {
     gap: 20px;
     flex-wrap: wrap;
+    z-index: -1;
     justify-content: space-around;
 }
 .service-list div{
@@ -949,6 +1086,7 @@ select{
     align-items: center;
     text-align: center;
     border: none;
+    z-index: -1;
     box-shadow: 0px 5px 5px rgb(110, 240, 121);
     background-color: rgb(121, 255, 161);
 }
@@ -968,6 +1106,55 @@ select{
 }
 .charge-container div span{
     font-size: 25px
+}
+
+
+.contact {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
+.contact div {
+    z-index: 0;
+}
+.contact .container{
+    width: 100%;
+    padding: 0px 10px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap:20px ;
+    text-align: center;
+    
+}
+input{
+    width: 70%;
+    height: 2.5rem;
+   
+}
+#textarea{
+    width: 70%;
+    height: 200px;
+    border-radius: 10px;
+}
+.footer p,q{
+    font-size: x-large;
+    width: 100%;
+}
+.emailbox{
+    width: 90%;
+}
+.scrollup{
+    margin-right: -20px;
+}
+.contact div{
+    width: 80%;
+}
+.contact img{
+    width: 100%;
+    height: 100%;
 }
 
 .faq-container{
@@ -995,6 +1182,7 @@ select{
     width: 95%;
     text-align: left;
     border: none;
+    z-index: -1;
   }
   .faq-item2 div p{
     font-size: 25px;
@@ -1017,16 +1205,15 @@ footer div {
 .img-container{
     width: 400px;
 }
-  }
+  
   .img-container p{
     font-size: 25px;
   }
-
+}
   .fade-in {
     opacity: 0.3;
     transform: translateY(30px);
     transition: opacity 0.5s ease-in, transform 1s ease-in;
-z-index:0;
   }
   
   .fade-in.fade-in-visible {
